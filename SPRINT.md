@@ -1,14 +1,14 @@
-# Sprint 1
+# Sprint 3
 
 ## Goal
-Build the site foundation: app shell, design tokens, fonts, sticky header, hero, and final CTA/contact form.
+Add the trust-building middle of the funnel: Aish-scale proof, About, FAQ, and a testimonials section kept behind a live flag until actual quotes are available.
 
-## What shipped
-- Next.js app scaffolded with App Router, TypeScript, and Tailwind CSS v4.
-- Custom design system based on the approved navy / cream / terracotta palette and typography direction.
-- Sticky header and landing hero tailored to David’s kosher marketing positioning.
-- Services preview and brand-strip section to support the conversion funnel.
-- Functional inquiry form that opens a prefilled email draft to dmuller91@gmail.com.
+## Included in this sprint
+- Aish-scale statistics section with high-credibility marketing numbers.
+- About section positioning David within the kosher food ecosystem.
+- FAQ section covering objections and buying signals.
+- Testimonials component created and hidden behind a flag until real quotes are approved.
+- SectionReveal animation wrapper remains applied across the current flow.
 
 ## Notes
-This Sprint is intentionally focused on the high-conversion top of funnel. The remaining marketing sections (proof, work, FAQ, testimonials, etc.) can be layered in later sprints.
+This sprint strengthens the narrative and objection-handling before the final contact CTA, without overloading the page with unapproved content.
