@@ -1,14 +1,15 @@
-# Sprint 3
+# Sprint 4
 
 ## Goal
-Add the trust-building middle of the funnel: Aish-scale proof, About, FAQ, and a testimonials section kept behind a live flag until actual quotes are available.
+Polish the site for launch: responsive behavior, stronger accessibility, 404 page, metadata, and a hardened visual finish.
 
 ## Included in this sprint
-- Aish-scale statistics section with high-credibility marketing numbers.
-- About section positioning David within the kosher food ecosystem.
-- FAQ section covering objections and buying signals.
-- Testimonials component created and hidden behind a flag until real quotes are approved.
-- SectionReveal animation wrapper remains applied across the current flow.
+- Footer added to complete the page architecture.
+- Custom SVG favicon added.
+- 404 page created in the site’s visual language.
+- Layout metadata extended for title, description, keywords, and OpenGraph-ready coverage.
+- Reduced-motion and focus-safe styling kept in place.
+- Mobile spacing and content stack reviewed for the narrower 375px width.
 
 ## Notes
-This sprint strengthens the narrative and objection-handling before the final contact CTA, without overloading the page with unapproved content.
+This sprint focuses on polish and readiness rather than feature growth. It makes the site feel complete, stable, and launchable.

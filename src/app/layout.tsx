@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, Figtree } from "next/font/google";
 import "./globals.css";
 
@@ -19,6 +19,13 @@ export const metadata: Metadata = {
   title: "David Muller | Kosher Marketing",
   description:
     "Helping kosher restaurants, brands, and experiences reach the right customers through SEO, paid ads, and a strategy built for the kosher food world.",
+  keywords: [
+    "kosher marketing",
+    "kosher food marketing",
+    "restaurant marketing",
+    "SEO for kosher brands",
+    "paid ads for kosher businesses",
+  ],
   openGraph: {
     title: "David Muller | Kosher Marketing",
     description:
@@ -27,6 +34,16 @@ export const metadata: Metadata = {
     siteName: "David Muller | Kosher Marketing",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "David Muller | Kosher Marketing",
+    description:
+      "Helping kosher restaurants, brands, and experiences reach the right customers through SEO, paid ads, and a strategy built for the kosher food world.",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#f6f0e6",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

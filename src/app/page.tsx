@@ -2,6 +2,7 @@ import { AboutSection } from "@/components/sections/AboutSection";
 import { AishSection } from "@/components/sections/AishSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { FAQSection } from "@/components/sections/FAQSection";
+import { Footer } from "@/components/sections/Footer";
 import { Header } from "@/components/sections/Header";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { LogoStrip } from "@/components/sections/LogoStrip";
@@ -24,6 +25,7 @@ export default function Home() {
       <FAQSection />
       <TestimonialsSection />
       <ContactSection />
+      <Footer />
     </main>
   );
 }
