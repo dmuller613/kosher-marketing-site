@@ -6,9 +6,14 @@ export function AishSection() {
     <section className="bg-[var(--color-navy)] py-16 text-white sm:py-20">
       <div className="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10">
         <SectionReveal className="mb-10 max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-white/70">
-            {siteConfig.atScale.eyebrow}
-          </p>
+          <a
+            href="https://www.aish.com"
+            target="_blank"
+            rel="noreferrer"
+            className="text-sm font-semibold uppercase tracking-[0.22em] text-white/70 transition hover:text-white/90"
+          >
+            {siteConfig.atScale.eyebrow} ↗
+          </a>
           <h2 className="mt-3 font-display text-3xl font-bold tracking-[-0.05em] text-white sm:text-4xl">
             {siteConfig.atScale.heading}
           </h2>

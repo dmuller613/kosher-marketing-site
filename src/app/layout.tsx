@@ -23,9 +23,12 @@ export const metadata: Metadata = {
   keywords: [
     "kosher marketing",
     "kosher food marketing",
-    "restaurant marketing",
+    "kosher restaurant marketing",
     "SEO for kosher brands",
     "paid ads for kosher businesses",
+    "kosher social media",
+    "kosher brand strategy",
+    "David Muller marketing",
   ],
   openGraph: {
     title: "David Muller | Kosher Marketing",

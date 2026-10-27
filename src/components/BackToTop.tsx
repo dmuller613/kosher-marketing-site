@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 
 export function BackToTop() {
   const [visible, setVisible] = useState(false);
+  // Always render so CSS transition can animate out
 
   useEffect(() => {
     const onScroll = () => setVisible(window.scrollY > 500);
@@ -11,13 +12,11 @@ export function BackToTop() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  if (!visible) return null;
-
   return (
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       aria-label="Back to top"
-      className="fixed bottom-6 right-6 z-40 flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-sand)] bg-white shadow-[0_4px_20px_rgba(22,36,58,0.12)] transition hover:border-[var(--color-terracotta)] hover:shadow-[0_6px_24px_rgba(194,83,47,0.18)]"
+      className={`fixed bottom-6 right-6 z-40 flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-sand)] bg-white shadow-[0_4px_20px_rgba(22,36,58,0.12)] transition-all duration-300 hover:border-[var(--color-terracotta)] hover:shadow-[0_6px_24px_rgba(194,83,47,0.18)] ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}
     >
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="var(--color-ink)" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <line x1="7" y1="12" x2="7" y2="2"/>

@@ -1,4 +1,5 @@
 import { siteConfig } from "@/lib/data";
+import { CurrentYear } from "@/components/CurrentYear";
 
 export function Footer() {
   return (
@@ -50,7 +51,7 @@ export function Footer() {
         </div>
 
         <div className="mt-8 border-t border-[var(--color-sand)] pt-6 text-xs text-[var(--color-stone)]">
-          © 2025 David Muller. All rights reserved.
+          © <CurrentYear /> David Muller. All rights reserved.
         </div>
       </div>
     </footer>

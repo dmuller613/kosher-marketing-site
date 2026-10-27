@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { siteConfig } from "@/lib/data";
 
 export function Header() {
@@ -83,29 +84,38 @@ export function Header() {
         </div>
       </div>
 
-      {open && (
-        <nav className="border-t border-[var(--color-sand)] bg-[var(--color-paper)] px-5 py-4 md:hidden">
-          <div className="flex flex-col gap-1">
-            {siteConfig.nav.map((item) => (
+      <AnimatePresence>
+        {open && (
+          <motion.nav
+            key="mobile-menu"
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
+            className="border-t border-[var(--color-sand)] bg-[var(--color-paper)] px-5 py-4 md:hidden"
+          >
+            <div className="flex flex-col gap-1">
+              {siteConfig.nav.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className="rounded-xl px-3 py-2.5 text-sm font-medium text-[var(--color-stone)] transition hover:bg-[var(--color-sand)]/40 hover:text-[var(--color-ink)]"
+                >
+                  {item.label}
+                </a>
+              ))}
               <a
-                key={item.href}
-                href={item.href}
+                href="#contact"
                 onClick={() => setOpen(false)}
-                className="rounded-xl px-3 py-2.5 text-sm font-medium text-[var(--color-stone)] transition hover:bg-[var(--color-sand)]/40 hover:text-[var(--color-ink)]"
+                className="mt-2 rounded-xl bg-[var(--color-terracotta)] px-3 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-[var(--color-terracotta-deep)]"
               >
-                {item.label}
+                Let&apos;s talk
               </a>
-            ))}
-            <a
-              href="#contact"
-              onClick={() => setOpen(false)}
-              className="mt-2 rounded-xl bg-[var(--color-terracotta)] px-3 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-[var(--color-terracotta-deep)]"
-            >
-              Let&apos;s talk
-            </a>
-          </div>
-        </nav>
-      )}
+            </div>
+          </motion.nav>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

@@ -54,7 +54,7 @@ export function StatsStrip() {
   return (
     <div className="border-t border-[var(--color-sand)] bg-white">
       <div className="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10">
-        <div className="grid grid-cols-2 divide-x divide-[var(--color-sand)] md:grid-cols-4">
+        <div className="grid grid-cols-2 divide-x divide-y divide-[var(--color-sand)] md:grid-cols-4 md:divide-y-0">
           {stats.map((stat) => (
             <a
               key={stat.label}
