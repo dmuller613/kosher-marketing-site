@@ -67,6 +67,16 @@ export function ProofSection() {
             );
           })}
         </div>
+
+        <div className="mt-10 text-center">
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/8 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/15 hover:border-white/35"
+          >
+            Like what you see? Let&apos;s build yours
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="2" y1="7" x2="12" y2="7"/><polyline points="8,3 12,7 8,11"/></svg>
+          </a>
+        </div>
       </div>
     </section>
   );

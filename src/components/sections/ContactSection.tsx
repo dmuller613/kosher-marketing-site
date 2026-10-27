@@ -60,12 +60,21 @@ export function ContactSection() {
           </p>
           <ul className="space-y-2.5">
             {[
-              { icon: "⚡", text: "Responds within 24 hours" },
-              { icon: "☎️", text: "Free 30-min strategy call" },
-              { icon: "✓", text: "No long-term contract required" },
+              {
+                icon: <svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="1,6 3.5,8.5 10,2"/></svg>,
+                text: "Responds within 24 hours",
+              },
+              {
+                icon: <svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="1" y="2" width="9" height="7" rx="1.5"/><polyline points="1,3.5 5.5,6.5 10,3.5"/></svg>,
+                text: "Free 30-min strategy call",
+              },
+              {
+                icon: <svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="5.5" cy="5.5" r="4.5"/><path d="M3.5 5.5l1.5 1.5 2.5-2.5"/></svg>,
+                text: "No long-term contract required",
+              },
             ].map(({ icon, text }) => (
               <li key={text} className="flex items-center gap-2.5 text-sm text-[var(--color-stone)]">
-                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--color-terracotta)]/10 text-[11px]">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--color-terracotta)]/10 text-[var(--color-terracotta-deep)]">
                   {icon}
                 </span>
                 {text}

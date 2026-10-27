@@ -94,6 +94,11 @@ details[open] > summary::after {
   transform: rotate(180deg);
 }
 
+details[open] {
+  border-left: 3px solid var(--color-terracotta);
+  padding-left: calc(1.25rem - 3px);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

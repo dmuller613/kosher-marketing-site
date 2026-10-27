@@ -40,6 +40,16 @@ export function WorkSection() {
           </SectionReveal>
         ))}
       </div>
+
+      <SectionReveal className="mt-10 flex justify-center">
+        <a
+          href="#contact"
+          className="inline-flex items-center gap-2 rounded-full border border-[var(--color-sand)] bg-white px-6 py-3 text-sm font-semibold text-[var(--color-ink)] transition hover:border-[var(--color-terracotta)] hover:text-[var(--color-terracotta-deep)]"
+        >
+          Want results like this?
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="2" y1="7" x2="12" y2="7"/><polyline points="8,3 12,7 8,11"/></svg>
+        </a>
+      </SectionReveal>
     </section>
   );
 }
