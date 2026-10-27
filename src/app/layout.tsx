@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, Figtree } from "next/font/google";
+import { BackToTop } from "@/components/BackToTop";
 import "./globals.css";
 
 const bricolage = Bricolage_Grotesque({
@@ -49,7 +50,10 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${bricolage.variable} ${figtree.variable} h-full antialiased`}>
-      <body className="min-h-full bg-[var(--color-cream)] text-[var(--color-ink)]">{children}</body>
+      <body className="min-h-full bg-[var(--color-cream)] text-[var(--color-ink)]">
+        {children}
+        <BackToTop />
+      </body>
     </html>
   );
 }

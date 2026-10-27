@@ -13,7 +13,14 @@ export function HeroSection() {
           </p>
 
           <h1 className="max-w-xl font-display text-4xl font-bold leading-[0.96] tracking-[-0.05em] text-[var(--color-ink)] sm:text-5xl lg:text-6xl">
-            {siteConfig.hero.heading}
+            I already{" "}
+            <span className="relative whitespace-nowrap text-[var(--color-terracotta)]">
+              reach your customers
+              <svg className="absolute -bottom-1 left-0 w-full" viewBox="0 0 300 8" preserveAspectRatio="none" fill="none" aria-hidden="true">
+                <path d="M2 6 Q75 2 150 5 Q225 8 298 4" stroke="var(--color-terracotta)" strokeWidth="2.5" strokeLinecap="round" opacity="0.4"/>
+              </svg>
+            </span>
+            .{" "}Let&apos;s get them to your door.
           </h1>
 
           <p className="max-w-lg text-lg leading-8 text-[var(--color-stone)]">

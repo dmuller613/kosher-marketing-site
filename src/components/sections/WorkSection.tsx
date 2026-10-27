@@ -21,7 +21,13 @@ export function WorkSection() {
                 <h3 className="font-display text-2xl font-bold tracking-[-0.04em] text-[var(--color-ink)]">
                   {project.title}
                 </h3>
-                <span className="mt-1 shrink-0 rounded-full bg-[var(--color-terracotta)]/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--color-terracotta-deep)]">
+                <span className={`mt-1 shrink-0 rounded-full px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] ${
+                  project.tag === "SEO"
+                    ? "bg-[var(--color-navy)]/10 text-[var(--color-navy)]"
+                    : project.tag === "Social"
+                    ? "bg-[var(--color-terracotta)]/10 text-[var(--color-terracotta-deep)]"
+                    : "bg-emerald-50 text-emerald-700"
+                }`}>
                   {project.tag}
                 </span>
               </div>
