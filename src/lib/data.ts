@@ -39,6 +39,7 @@ export const siteConfig: {
   instagramUrl: "https://www.instagram.com/kosherdadeats/",
   nav: [
     { label: "Services", href: "#services" },
+    { label: "Work", href: "#work" },
     { label: "Proof", href: "#proof" },
     { label: "Contact", href: "#contact" },
   ],

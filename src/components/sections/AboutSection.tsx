@@ -64,6 +64,23 @@ export function AboutSection() {
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
+
+          <ul className="mt-2 space-y-2.5">
+            {[
+              "Strategy built around the kosher customer journey",
+              "SEO, paid ads, social, and email — all in one place",
+              "Clear reporting, no jargon, no lock-in",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-2.5 text-sm text-[var(--color-stone)]">
+                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--color-terracotta)]/10">
+                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" stroke="var(--color-terracotta-deep)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <polyline points="1.5,4.5 3.5,6.5 7.5,2.5"/>
+                  </svg>
+                </span>
+                {item}
+              </li>
+            ))}
+          </ul>
         </SectionReveal>
       </div>
     </section>

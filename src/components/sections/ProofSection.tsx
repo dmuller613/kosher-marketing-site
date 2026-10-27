@@ -7,9 +7,14 @@ export function ProofSection() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10">
         <SectionReveal className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-white/75">
-              {siteConfig.proof.label}
-            </p>
+            <div className="flex items-center gap-3">
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-white/75">
+                {siteConfig.proof.label}
+              </p>
+              <span className="rounded-full border border-[var(--color-terracotta)]/40 bg-[var(--color-terracotta)]/20 px-2.5 py-0.5 text-[11px] font-bold tracking-[0.06em] text-white/90">
+                420K+ views
+              </span>
+            </div>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-[-0.05em] text-white sm:text-4xl">
               {siteConfig.proof.heading}
             </h2>

@@ -7,6 +7,7 @@ import { Header } from "@/components/sections/Header";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { LogoStrip } from "@/components/sections/LogoStrip";
 import { ProcessSection } from "@/components/sections/ProcessSection";
+import { StatsStrip } from "@/components/sections/StatsStrip";
 import { ProofSection } from "@/components/sections/ProofSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
@@ -17,6 +18,7 @@ export default function Home() {
     <main className="min-h-screen bg-[var(--color-cream)] text-[var(--color-ink)]">
       <Header />
       <HeroSection />
+      <StatsStrip />
       <LogoStrip />
       <ServicesSection />
       <ProcessSection />
