@@ -106,17 +106,38 @@ export function ContactSection() {
           <fieldset className="mt-6">
             <legend className="mb-3 text-sm font-medium text-[var(--color-ink)]">What do you need help with?</legend>
             <div className="grid gap-2 sm:grid-cols-2">
-              {formOptions.map((option) => (
-                <label key={option} className="flex items-center gap-2 rounded-2xl border border-[var(--color-sand)] bg-[var(--color-paper)] px-3 py-2 text-sm text-[var(--color-stone)]">
-                  <input
-                    type="checkbox"
-                    checked={formData.services.includes(option)}
-                    onChange={() => handleCheckboxChange(option)}
-                    className="h-4 w-4 rounded border-[var(--color-sand)] text-[var(--color-terracotta)] focus:ring-[var(--color-terracotta)]"
-                  />
-                  {option}
-                </label>
-              ))}
+              {formOptions.map((option) => {
+                const checked = formData.services.includes(option);
+                return (
+                  <label
+                    key={option}
+                    className={`flex cursor-pointer items-center gap-2.5 rounded-2xl border px-3 py-2.5 text-sm font-medium transition ${
+                      checked
+                        ? "border-[var(--color-terracotta)] bg-[var(--color-terracotta)]/8 text-[var(--color-ink)]"
+                        : "border-[var(--color-sand)] bg-[var(--color-paper)] text-[var(--color-stone)] hover:border-[var(--color-terracotta)]/40"
+                    }`}
+                  >
+                    <span className={`flex h-4 w-4 shrink-0 items-center justify-center rounded border transition ${
+                      checked
+                        ? "border-[var(--color-terracotta)] bg-[var(--color-terracotta)]"
+                        : "border-[var(--color-sand)] bg-white"
+                    }`}>
+                      {checked && (
+                        <svg width="8" height="6" viewBox="0 0 8 6" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="1 3 3 5 7 1" />
+                        </svg>
+                      )}
+                    </span>
+                    <input
+                      type="checkbox"
+                      checked={checked}
+                      onChange={() => handleCheckboxChange(option)}
+                      className="sr-only"
+                    />
+                    {option}
+                  </label>
+                );
+              })}
             </div>
           </fieldset>
 
@@ -140,8 +161,12 @@ export function ContactSection() {
             </button>
 
             {submitted && (
-              <span className="text-sm font-medium text-[var(--color-navy)]">
-                Your email draft is ready.
+              <span className="flex items-center gap-2 rounded-full border border-[var(--color-navy)]/20 bg-[var(--color-navy)]/8 px-4 py-2 text-sm font-medium text-[var(--color-navy)]">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="7" cy="7" r="6" />
+                  <polyline points="4.5 7 6.5 9 9.5 5" />
+                </svg>
+                Email draft ready to send.
               </span>
             )}
           </div>

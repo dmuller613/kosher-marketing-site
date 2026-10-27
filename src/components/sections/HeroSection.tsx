@@ -3,7 +3,9 @@ import { SectionReveal } from "@/components/sections/SectionReveal";
 
 export function HeroSection() {
   return (
-    <section id="top" className="mx-auto max-w-6xl px-5 pb-14 pt-10 sm:px-8 lg:px-10 lg:pb-20 lg:pt-16">
+    <section id="top" className="relative mx-auto max-w-6xl overflow-hidden px-5 pb-14 pt-10 sm:px-8 lg:px-10 lg:pb-20 lg:pt-16">
+      <div aria-hidden="true" className="pointer-events-none absolute -right-32 -top-32 h-[520px] w-[520px] rounded-full bg-[var(--color-terracotta)]/6 blur-[90px]" />
+      <div aria-hidden="true" className="pointer-events-none absolute -left-32 bottom-0 h-[380px] w-[380px] rounded-full bg-[var(--color-navy)]/5 blur-[80px]" />
       <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr]">
         <SectionReveal className="space-y-7">
           <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--color-terracotta-deep)]">
