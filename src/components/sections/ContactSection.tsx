@@ -58,6 +58,21 @@ export function ContactSection() {
           <p className="max-w-md text-lg leading-8 text-[var(--color-stone)]">
             Tell me who you are, what you&apos;re selling, and where you want more reach. I&apos;ll respond with the next step.
           </p>
+          <ul className="space-y-2.5">
+            {[
+              { icon: "⚡", text: "Responds within 24 hours" },
+              { icon: "☎️", text: "Free 30-min strategy call" },
+              { icon: "✓", text: "No long-term contract required" },
+            ].map(({ icon, text }) => (
+              <li key={text} className="flex items-center gap-2.5 text-sm text-[var(--color-stone)]">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--color-terracotta)]/10 text-[11px]">
+                  {icon}
+                </span>
+                {text}
+              </li>
+            ))}
+          </ul>
+
           <a
             href={`mailto:${siteConfig.email}`}
             className="inline-flex items-center rounded-full border border-[var(--color-sand)] bg-white px-5 py-3 text-sm font-semibold text-[var(--color-ink)] transition hover:border-[var(--color-terracotta)] hover:text-[var(--color-terracotta-deep)]"

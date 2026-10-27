@@ -35,9 +35,16 @@ export function HeroSection() {
             </a>
           </div>
 
-          <p className="text-sm font-medium text-[var(--color-stone)]">
-            {siteConfig.hero.supportLine}
-          </p>
+          <div className="flex flex-wrap gap-2">
+            {siteConfig.hero.supportLine.split(" · ").map((item) => (
+              <span
+                key={item}
+                className="inline-flex items-center rounded-full border border-[var(--color-sand)] bg-white px-3 py-1 text-xs font-semibold text-[var(--color-stone)]"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
         </SectionReveal>
 
         <SectionReveal className="relative">

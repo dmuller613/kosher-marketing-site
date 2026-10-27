@@ -11,9 +11,15 @@ export function AboutSection() {
               <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-[var(--color-navy)] font-display text-xl font-bold text-white shadow-[0_6px_20px_rgba(36,64,106,0.35)]">
                 D
               </span>
-              <span className="rounded-full border border-[var(--color-sand)] bg-white/80 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--color-ink)]">
-                Kosher marketer
-              </span>
+              <div className="flex flex-col items-end gap-1.5">
+                <span className="rounded-full border border-[var(--color-sand)] bg-white/80 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--color-ink)]">
+                  Kosher marketer
+                </span>
+                <span className="flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-[10px] font-semibold text-emerald-700">
+                  <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-500" />
+                  Taking new clients
+                </span>
+              </div>
             </div>
 
             <div className="space-y-1">
