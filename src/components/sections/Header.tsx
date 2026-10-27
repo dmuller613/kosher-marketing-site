@@ -6,11 +6,27 @@ import { siteConfig } from "@/lib/data";
 export function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeHref, setActiveHref] = useState("");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const ids = siteConfig.nav.map((item) => item.href.slice(1));
+    const sections = ids.map((id) => document.getElementById(id)).filter(Boolean) as HTMLElement[];
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) setActiveHref(`#${entry.target.id}`);
+        }
+      },
+      { rootMargin: "-40% 0px -55% 0px" }
+    );
+    sections.forEach((s) => observer.observe(s));
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -20,12 +36,22 @@ export function Header() {
           {siteConfig.brand}
         </a>
 
-        <nav className="hidden items-center gap-6 text-sm text-[var(--color-stone)] md:flex">
-          {siteConfig.nav.map((item) => (
-            <a key={item.href} href={item.href} className="transition hover:text-[var(--color-ink)]">
-              {item.label}
-            </a>
-          ))}
+        <nav className="hidden items-center gap-6 text-sm md:flex">
+          {siteConfig.nav.map((item) => {
+            const isActive = activeHref === item.href;
+            return (
+              <a
+                key={item.href}
+                href={item.href}
+                className={`relative transition ${isActive ? "font-semibold text-[var(--color-ink)]" : "text-[var(--color-stone)] hover:text-[var(--color-ink)]"}`}
+              >
+                {item.label}
+                {isActive && (
+                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full bg-[var(--color-terracotta)]" />
+                )}
+              </a>
+            );
+          })}
         </nav>
 
         <div className="flex items-center gap-3">

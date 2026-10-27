@@ -46,6 +46,7 @@ export function ProofSection() {
                   className="group flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-white/15 bg-white/5 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-white/30 hover:shadow-[0_24px_60px_rgba(0,0,0,0.25)]"
                 >
                   <div className={`relative flex min-h-[200px] items-end justify-between bg-gradient-to-br ${gradients[index]} p-5`}>
+                    <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/30 to-transparent" aria-hidden="true" />
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/15 ring-2 ring-white/25 backdrop-blur-sm transition duration-300 group-hover:bg-white/25 group-hover:ring-white/40">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="white" aria-hidden="true">

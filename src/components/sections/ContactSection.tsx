@@ -176,7 +176,7 @@ export function ContactSection() {
               onChange={handleChange}
               rows={5}
               placeholder="A sentence or two about your business and what you want help with."
-              className="mt-2 w-full rounded-2xl border border-[var(--color-sand)] bg-[var(--color-paper)] px-3 py-3 text-[var(--color-ink)] outline-none transition placeholder:text-[var(--color-stone)]/50 focus:border-[var(--color-terracotta)]"
+              className="mt-2 w-full resize-none rounded-2xl border border-[var(--color-sand)] bg-[var(--color-paper)] px-3 py-3 text-[var(--color-ink)] outline-none transition placeholder:text-[var(--color-stone)]/50 focus:border-[var(--color-terracotta)]"
             />
           </label>
 

@@ -19,10 +19,12 @@ function AnimatedNumber({ numeric, suffix }: { numeric: number; suffix: string }
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasRun.current) {
           hasRun.current = true;
+          if (reducedMotion) { setDisplay(numeric); return; }
           const duration = 1000;
           const start = Date.now();
           const tick = () => {
