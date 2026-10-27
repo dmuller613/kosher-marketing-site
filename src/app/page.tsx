@@ -6,6 +6,7 @@ import { Footer } from "@/components/sections/Footer";
 import { Header } from "@/components/sections/Header";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { LogoStrip } from "@/components/sections/LogoStrip";
+import { ProcessSection } from "@/components/sections/ProcessSection";
 import { ProofSection } from "@/components/sections/ProofSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
@@ -18,6 +19,7 @@ export default function Home() {
       <HeroSection />
       <LogoStrip />
       <ServicesSection />
+      <ProcessSection />
       <ProofSection />
       <WorkSection />
       <AishSection />

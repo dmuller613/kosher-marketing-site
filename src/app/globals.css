@@ -59,6 +59,12 @@ a {
   text-decoration: none;
 }
 
+/* Hero dot pattern */
+.hero-dots {
+  background-image: radial-gradient(var(--color-sand) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
 /* Marquee */
 @keyframes marquee {
   from { transform: translateX(0); }

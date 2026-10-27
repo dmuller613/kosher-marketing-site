@@ -56,7 +56,7 @@ export function ContactSection() {
             Need a smarter way to reach the kosher customer?
           </h2>
           <p className="max-w-md text-lg leading-8 text-[var(--color-stone)]">
-            Tell me who you are, what you&apos;re selling, and where you want more reach. I&apos;ll respond with the next step.
+            Tell me who you are and what you&apos;re selling. I&apos;ll come back with a clear next step — no pitch, no pressure.
           </p>
           <ul className="space-y-2.5">
             {[
