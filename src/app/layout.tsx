@@ -30,6 +30,9 @@ export const metadata: Metadata = {
     "kosher brand strategy",
     "David Muller marketing",
   ],
+  alternates: {
+    canonical: "https://kosher-marketing.com",
+  },
   openGraph: {
     title: "David Muller | Kosher Marketing",
     description:

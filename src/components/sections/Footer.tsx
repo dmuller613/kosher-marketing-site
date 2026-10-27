@@ -26,9 +26,6 @@ export function Footer() {
                     </a>
                   </li>
                 ))}
-                <li>
-                  <a href="#work" className="text-sm text-[var(--color-stone)] transition hover:text-[var(--color-terracotta-deep)]">Work</a>
-                </li>
               </ul>
             </div>
 
