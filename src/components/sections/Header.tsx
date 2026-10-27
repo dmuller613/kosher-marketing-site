@@ -1,13 +1,20 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { siteConfig } from "@/lib/data";
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 16);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--color-sand)]/80 bg-[var(--color-paper)]/90 backdrop-blur-xl">
+    <header className={`sticky top-0 z-50 border-b border-[var(--color-sand)]/80 bg-[var(--color-paper)]/90 backdrop-blur-xl transition-shadow duration-300 ${scrolled ? "shadow-[0_4px_24px_rgba(22,36,58,0.08)]" : ""}`}>
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8 lg:px-10">
         <a href="#top" className="font-display text-lg font-semibold tracking-tight text-[var(--color-ink)]">
           {siteConfig.brand}

@@ -23,7 +23,7 @@ export function HeroSection() {
           <div className="flex flex-col gap-3 sm:flex-row">
             <a
               href="#contact"
-              className="inline-flex items-center justify-center rounded-full bg-[var(--color-terracotta)] px-6 py-3 text-base font-semibold text-white transition hover:bg-[var(--color-terracotta-deep)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-terracotta)] focus-visible:ring-offset-2"
+              className="inline-flex items-center justify-center rounded-full bg-[var(--color-terracotta)] px-6 py-3 text-base font-semibold text-white shadow-[0_6px_24px_rgba(194,83,47,0.32)] transition hover:bg-[var(--color-terracotta-deep)] hover:shadow-[0_8px_28px_rgba(194,83,47,0.42)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-terracotta)] focus-visible:ring-offset-2"
             >
               Let&apos;s talk about your brand
             </a>

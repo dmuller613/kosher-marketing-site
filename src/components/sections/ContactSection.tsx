@@ -75,7 +75,8 @@ export function ContactSection() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="mt-2 w-full rounded-2xl border border-[var(--color-sand)] bg-[var(--color-paper)] px-3 py-3 text-[var(--color-ink)] outline-none transition focus:border-[var(--color-terracotta)]"
+                placeholder="Your name"
+                className="mt-2 w-full rounded-2xl border border-[var(--color-sand)] bg-[var(--color-paper)] px-3 py-3 text-[var(--color-ink)] outline-none transition placeholder:text-[var(--color-stone)]/50 focus:border-[var(--color-terracotta)]"
               />
             </label>
 
@@ -86,7 +87,8 @@ export function ContactSection() {
                 value={formData.business}
                 onChange={handleChange}
                 required
-                className="mt-2 w-full rounded-2xl border border-[var(--color-sand)] bg-[var(--color-paper)] px-3 py-3 text-[var(--color-ink)] outline-none transition focus:border-[var(--color-terracotta)]"
+                placeholder="Your business"
+                className="mt-2 w-full rounded-2xl border border-[var(--color-sand)] bg-[var(--color-paper)] px-3 py-3 text-[var(--color-ink)] outline-none transition placeholder:text-[var(--color-stone)]/50 focus:border-[var(--color-terracotta)]"
               />
             </label>
 
@@ -98,7 +100,8 @@ export function ContactSection() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="mt-2 w-full rounded-2xl border border-[var(--color-sand)] bg-[var(--color-paper)] px-3 py-3 text-[var(--color-ink)] outline-none transition focus:border-[var(--color-terracotta)]"
+                placeholder="you@example.com"
+                className="mt-2 w-full rounded-2xl border border-[var(--color-sand)] bg-[var(--color-paper)] px-3 py-3 text-[var(--color-ink)] outline-none transition placeholder:text-[var(--color-stone)]/50 focus:border-[var(--color-terracotta)]"
               />
             </label>
           </div>
@@ -148,14 +151,15 @@ export function ContactSection() {
               value={formData.message}
               onChange={handleChange}
               rows={5}
-              className="mt-2 w-full rounded-2xl border border-[var(--color-sand)] bg-[var(--color-paper)] px-3 py-3 text-[var(--color-ink)] outline-none transition focus:border-[var(--color-terracotta)]"
+              placeholder="A sentence or two about your business and what you want help with."
+              className="mt-2 w-full rounded-2xl border border-[var(--color-sand)] bg-[var(--color-paper)] px-3 py-3 text-[var(--color-ink)] outline-none transition placeholder:text-[var(--color-stone)]/50 focus:border-[var(--color-terracotta)]"
             />
           </label>
 
           <div className="mt-6 flex items-center justify-between gap-4">
             <button
               type="submit"
-              className="inline-flex items-center justify-center rounded-full bg-[var(--color-terracotta)] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[var(--color-terracotta-deep)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-terracotta)] focus-visible:ring-offset-2"
+              className="inline-flex items-center justify-center rounded-full bg-[var(--color-terracotta)] px-6 py-3 text-sm font-semibold text-white shadow-[0_6px_24px_rgba(194,83,47,0.28)] transition hover:bg-[var(--color-terracotta-deep)] hover:shadow-[0_8px_28px_rgba(194,83,47,0.4)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-terracotta)] focus-visible:ring-offset-2"
             >
               Send inquiry
             </button>

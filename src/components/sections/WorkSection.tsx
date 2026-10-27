@@ -31,9 +31,9 @@ export function WorkSection() {
                   <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--color-stone)]">Role</p>
                   <p className="text-base leading-7 text-[var(--color-stone)]">{project.role}</p>
                 </div>
-                <div>
-                  <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--color-terracotta-deep)]">Outcome</p>
-                  <p className="text-base leading-7 text-[var(--color-stone)]">{project.outcome}</p>
+                <div className="rounded-2xl bg-[var(--color-terracotta)]/5 p-3">
+                  <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--color-terracotta-deep)]">↑ Result</p>
+                  <p className="text-base leading-7 text-[var(--color-ink)]">{project.outcome}</p>
                 </div>
               </div>
             </article>
