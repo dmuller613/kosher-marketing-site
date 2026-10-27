@@ -21,6 +21,12 @@
 html {
   scroll-behavior: smooth;
   background-color: var(--color-cream);
+  scroll-padding-top: 72px;
+}
+
+::selection {
+  background: var(--color-terracotta);
+  color: #fff;
 }
 
 body {
@@ -51,6 +57,26 @@ img {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* FAQ chevron */
+details > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+details > summary::after {
+  content: "↓";
+  flex-shrink: 0;
+  font-size: 0.9rem;
+  color: var(--color-terracotta-deep);
+  transition: transform 0.25s ease;
+}
+
+details[open] > summary::after {
+  transform: rotate(180deg);
 }
 
 @media (prefers-reduced-motion: reduce) {

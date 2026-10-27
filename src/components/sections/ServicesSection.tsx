@@ -15,9 +15,9 @@ export function ServicesSection() {
 
       <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
         {siteConfig.services.map((service, index) => (
-          <SectionReveal key={service.title} className="h-full">
-            <div className="flex h-full flex-col rounded-[1.75rem] border border-[var(--color-sand)] bg-[var(--color-paper)] p-6 shadow-[0_12px_30px_rgba(22,36,58,0.04)]">
-              <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-terracotta)]/10 text-sm font-bold text-[var(--color-terracotta-deep)]">
+          <SectionReveal key={service.title} className="h-full" delay={index * 0.07}>
+            <div className="group flex h-full flex-col rounded-[1.75rem] border border-[var(--color-sand)] bg-[var(--color-paper)] p-6 shadow-[0_12px_30px_rgba(22,36,58,0.04)] transition duration-300 hover:-translate-y-1 hover:border-[var(--color-terracotta)]/30 hover:shadow-[0_20px_50px_rgba(22,36,58,0.09)]">
+              <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-terracotta)]/10 text-sm font-bold text-[var(--color-terracotta-deep)] transition group-hover:bg-[var(--color-terracotta)]/20">
                 0{index + 1}
               </div>
               <h3 className="font-display text-2xl font-bold tracking-[-0.04em] text-[var(--color-ink)]">

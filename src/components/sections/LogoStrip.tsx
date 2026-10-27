@@ -9,11 +9,11 @@ export function LogoStrip() {
           Brands I&apos;ve worked with
         </p>
 
-        <div className="flex flex-wrap items-center justify-center gap-4 text-sm font-semibold tracking-[0.06em] text-[var(--color-stone)] sm:gap-6">
+        <div className="flex flex-wrap items-center justify-center gap-3 text-sm font-semibold tracking-[0.06em] text-[var(--color-stone)] sm:gap-4">
           {siteConfig.brands.map((brand) => (
             <div
               key={brand}
-              className="rounded-full border border-[var(--color-sand)] bg-white px-4 py-2"
+              className="rounded-full border border-[var(--color-sand)] bg-white px-4 py-2 shadow-[0_2px_8px_rgba(22,36,58,0.04)] transition hover:border-[var(--color-terracotta)]/30 hover:text-[var(--color-ink)]"
             >
               {brand}
             </div>

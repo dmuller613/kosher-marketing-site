@@ -57,9 +57,9 @@ export function HeroSection() {
 
               <div className="mt-10 grid gap-3 sm:grid-cols-3">
                 {siteConfig.metrics.map((metric) => (
-                  <div key={metric.label} className="rounded-2xl border border-white/15 bg-white/5 p-3 backdrop-blur-sm">
-                    <div className="text-xl font-bold tracking-[-0.04em]">{metric.label}</div>
-                    <p className="mt-1 text-xs text-white/75">{metric.value}</p>
+                  <div key={metric.label} className="rounded-2xl border border-white/15 bg-white/8 p-3 backdrop-blur-sm transition hover:border-white/30 hover:bg-white/12">
+                    <div className="text-xl font-bold tracking-[-0.04em] text-white">{metric.label}</div>
+                    <p className="mt-1 text-[11px] leading-4 text-white/70">{metric.value}</p>
                   </div>
                 ))}
               </div>
