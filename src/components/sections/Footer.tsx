@@ -1,7 +1,6 @@
 import { siteConfig } from "@/lib/data";
 
 export function Footer() {
-  const year = new Date().getFullYear();
   return (
     <footer className="border-t border-[var(--color-sand)] bg-[var(--color-paper)]">
       <div className="mx-auto max-w-6xl px-5 py-10 sm:px-8 lg:px-10">
@@ -26,7 +25,7 @@ export function Footer() {
         </div>
 
         <div className="mt-8 border-t border-[var(--color-sand)] pt-6 text-xs text-[var(--color-stone)]">
-          © {year} David Muller. All rights reserved.
+          © 2025 David Muller. All rights reserved.
         </div>
       </div>
     </footer>
