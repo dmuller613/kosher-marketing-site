@@ -24,7 +24,7 @@ export function Header() {
         <div className="flex items-center gap-3">
           <a
             href="#contact"
-            className="inline-flex items-center rounded-full bg-[var(--color-terracotta)] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[var(--color-terracotta-deep)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-terracotta)] focus-visible:ring-offset-2"
+            className="hidden items-center rounded-full bg-[var(--color-terracotta)] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[var(--color-terracotta-deep)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-terracotta)] focus-visible:ring-offset-2 sm:inline-flex"
           >
             Let&apos;s talk
           </a>
@@ -63,6 +63,13 @@ export function Header() {
                 {item.label}
               </a>
             ))}
+            <a
+              href="#contact"
+              onClick={() => setOpen(false)}
+              className="mt-2 rounded-xl bg-[var(--color-terracotta)] px-3 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-[var(--color-terracotta-deep)]"
+            >
+              Let&apos;s talk
+            </a>
           </div>
         </nav>
       )}
