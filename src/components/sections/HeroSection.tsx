@@ -58,8 +58,13 @@ export function HeroSection() {
               </div>
 
               <div className="mt-10 grid gap-3 sm:grid-cols-3">
-                {siteConfig.metrics.map((metric) => (
+                {siteConfig.metrics.map((metric, i) => (
                   <div key={metric.label} className="rounded-2xl border border-white/15 bg-white/8 p-3 backdrop-blur-sm transition hover:border-white/30 hover:bg-white/12">
+                    <div className="mb-2 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--color-terracotta)]/30">
+                      {i === 0 && <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true"><circle cx="6" cy="6" r="5"/><polyline points="6,3 6,6 8,7.5"/></svg>}
+                      {i === 1 && <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polygon points="6,1.5 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"/></svg>}
+                      {i === 2 && <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="2,6.5 4.5,9 10,3"/></svg>}
+                    </div>
                     <div className="text-xl font-bold tracking-[-0.04em] text-white">{metric.label}</div>
                     <p className="mt-1 text-[11px] leading-4 text-white/70">{metric.value}</p>
                   </div>
