@@ -38,14 +38,7 @@ export function HeroSection() {
           </motion.p>
 
           <motion.h1 variants={item} className="max-w-xl font-display text-4xl font-bold leading-[0.96] tracking-[-0.05em] text-[var(--color-ink)] sm:text-5xl lg:text-6xl">
-            I already{" "}
-            <span className="relative whitespace-nowrap text-[var(--color-terracotta)]">
-              reach your customers
-              <svg className="absolute -bottom-1 left-0 w-full" viewBox="0 0 300 8" preserveAspectRatio="none" fill="none" aria-hidden="true">
-                <path d="M2 6 Q75 2 150 5 Q225 8 298 4" stroke="var(--color-terracotta)" strokeWidth="2.5" strokeLinecap="round" opacity="0.4"/>
-              </svg>
-            </span>
-            .{" "}Let&apos;s get them to your door.
+            {siteConfig.hero.heading}
           </motion.h1>
 
           <motion.p variants={item} className="max-w-lg text-lg leading-8 text-[var(--color-stone)]">
@@ -67,15 +60,18 @@ export function HeroSection() {
             </a>
           </motion.div>
 
-          <motion.div variants={item} className="flex flex-wrap gap-2">
-            {siteConfig.hero.supportLine.split(" · ").map((chipItem) => (
-              <span
-                key={chipItem}
-                className="inline-flex items-center rounded-full border border-[var(--color-sand)] bg-white px-3 py-1 text-xs font-semibold text-[var(--color-stone)]"
-              >
-                {chipItem}
-              </span>
-            ))}
+          <motion.div variants={item} className="space-y-2">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--color-stone)]">Who I work with</p>
+            <div className="flex flex-wrap gap-2">
+              {siteConfig.hero.supportLine.split(" · ").map((chipItem) => (
+                <span
+                  key={chipItem}
+                  className="inline-flex items-center rounded-full border border-[var(--color-sand)] bg-white px-3 py-1 text-xs font-semibold text-[var(--color-stone)]"
+                >
+                  {chipItem}
+                </span>
+              ))}
+            </div>
           </motion.div>
         </motion.div>
 
@@ -87,32 +83,35 @@ export function HeroSection() {
         >
           <div className="overflow-hidden rounded-[2rem] border border-[var(--color-sand)] bg-[var(--color-paper)] p-4 shadow-[0_28px_80px_rgba(22,36,58,0.09)]">
             <div className="rounded-[1.5rem] bg-gradient-to-br from-[var(--color-navy)] via-[#2b4a73] to-[var(--color-terracotta)] p-6 text-white">
-              <div className="mb-10 flex items-center justify-between">
-                <span className="inline-flex rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/90">
-                  Kosher Dad Eats
-                </span>
-                <span className="text-sm font-medium text-white/80">8,300+ followers</span>
+              <div className="mb-6 flex items-center gap-3">
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white/15 ring-1 ring-white/25">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <circle cx="12" cy="12" r="5"/>
+                    <circle cx="17.5" cy="6.5" r="1.5" fill="white" stroke="none"/>
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-sm font-bold text-white">@kosherdadeats</p>
+                  <p className="text-[11px] text-white/70">8,300+ followers</p>
+                </div>
               </div>
 
-              <div className="space-y-4">
-                <div className="text-3xl font-black tracking-[-0.06em]">Millions of views</div>
-                <p className="max-w-xs text-sm leading-6 text-white/80">
-                  Reels that make kosher food feel discoverable, timely, and worth sharing.
+              <blockquote className="mb-6 border-l-2 border-white/30 pl-4">
+                <p className="text-base leading-7 text-white/90 italic">
+                  &ldquo;Someone who understands how to connect with the kosher world.&rdquo;
                 </p>
-              </div>
+              </blockquote>
 
-              <div className="mt-10 grid gap-3 sm:grid-cols-3">
-                {siteConfig.metrics.map((metric, i) => (
-                  <div key={metric.label} className="rounded-2xl border border-white/15 bg-white/8 p-3 backdrop-blur-sm transition hover:border-white/30 hover:bg-white/12">
-                    <div className="mb-2 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--color-terracotta)]/30">
-                      {i === 0 && <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true"><circle cx="6" cy="6" r="5"/><polyline points="6,3 6,6 8,7.5"/></svg>}
-                      {i === 1 && <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polygon points="6,1.5 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"/></svg>}
-                      {i === 2 && <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="2,6.5 4.5,9 10,3"/></svg>}
-                    </div>
-                    <div className="text-xl font-bold tracking-[-0.04em] text-white">{metric.label}</div>
-                    <p className="mt-1 text-[11px] leading-4 text-white/70">{metric.value}</p>
-                  </div>
-                ))}
+              <div className="grid gap-3 sm:grid-cols-2">
+                <div className="rounded-2xl border border-white/15 bg-white/8 p-3 backdrop-blur-sm">
+                  <div className="text-2xl font-black tracking-[-0.05em] text-white">96M+</div>
+                  <p className="mt-0.5 text-[11px] leading-4 text-white/70">video views</p>
+                </div>
+                <div className="rounded-2xl border border-white/15 bg-white/8 p-3 backdrop-blur-sm">
+                  <div className="text-2xl font-black tracking-[-0.05em] text-white">10M+</div>
+                  <p className="mt-0.5 text-[11px] leading-4 text-white/70">website sessions</p>
+                </div>
               </div>
             </div>
           </div>

@@ -8,8 +8,8 @@ const steps = [
   },
   {
     num: "02",
-    title: "I map your strategy",
-    body: "I'll identify the right channels and approach for your specific audience — no one-size-fits-all playbook.",
+    title: "We map your strategy",
+    body: "We'll identify the right channels and approach for your specific audience — no one-size-fits-all playbook.",
   },
   {
     num: "03",
@@ -37,8 +37,18 @@ export function ProcessSection() {
         </SectionReveal>
 
         <div className="relative grid gap-6 md:grid-cols-3">
-          {/* connector line on desktop */}
-          <div className="pointer-events-none absolute left-[calc(33.33%+1rem)] right-[calc(33.33%+1rem)] top-8 hidden h-px bg-gradient-to-r from-[var(--color-sand)] via-[var(--color-terracotta)]/30 to-[var(--color-sand)] md:block" aria-hidden="true" />
+          {/* connector line on desktop — sits between columns at center of number boxes */}
+          <div
+            className="pointer-events-none absolute hidden md:block"
+            style={{
+              top: "32px",
+              left: "calc(33.33% + 32px)",
+              right: "calc(33.33% + 32px)",
+              height: "1px",
+              background: "linear-gradient(to right, var(--color-sand), rgba(194,83,47,0.25), var(--color-sand))",
+            }}
+            aria-hidden="true"
+          />
 
           {steps.map((step, index) => (
             <SectionReveal key={step.num} delay={index * 0.1}>

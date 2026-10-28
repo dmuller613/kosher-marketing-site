@@ -45,15 +45,15 @@ export const siteConfig: {
   ],
   hero: {
     eyebrow: "David Muller · Kosher Marketing",
-    heading: "I already reach your customers. Let’s get them to your door.",
+    heading: "Reach the world’s kosher community.",
     subheading:
-      "Helping kosher brands find their customers, and customers find their brands.",
-    supportLine: "SEO · Paid ads · Social media · Email marketing",
+      "Connect your brand with hundreds of thousands of kosher-observant consumers — through SEO, paid ads, social media, email, and content.",
+    supportLine: "Restaurants · Kosher products · Experiences · Websites",
   },
   metrics: [
     { label: "10+ years", value: "in digital marketing" },
     { label: "Kosher-first", value: "audience knowledge" },
-    { label: "Client-ready", value: "monthly retainers" },
+    { label: "Real results", value: "for kosher brands" },
   ],
   services: [
     {
@@ -75,6 +75,11 @@ export const siteConfig: {
       title: "Email marketing",
       description:
         "Customer journeys that turn attention into repeat visits, purchases, and lasting brand loyalty.",
+    },
+    {
+      title: "Content creation",
+      description:
+        "Articles, blog posts, and editorial content that build authority, drive organic traffic, and tell your brand’s story to kosher consumers.",
     },
   ],
   proof: {
@@ -117,7 +122,7 @@ export const siteConfig: {
     },
     {
       title: "Muffin Boutique",
-      tag: "Content",
+      tag: "Social",
       role: "Content partnership focused on creative promotion for a restaurant brand with an active content series.",
       outcome: "Built creative visibility that keeps the brand in front of the right customers in a scalable, ongoing way.",
     },
@@ -170,7 +175,7 @@ export const siteConfig: {
     enabled: false,
     items: [],
   },
-  brands: ["Jewlish", "Avenco", "My Parchment", "Muffin Boutique", "Aish"],
+  brands: ["Jewlish", "Avenco", "Abu Avi Bagels", "Muffin Boutique", "Jerusalem Brewery", "Salon Yivani"],
 };
 
 export type FormSelections =
